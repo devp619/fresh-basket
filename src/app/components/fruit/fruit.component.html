@@ -1,0 +1,15 @@
+<mat-card class="fruit-card">
+  <mat-card-header>
+    <mat-card-title>{{fruit.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="fruit-image" [src]="fruit.imagePath" alt="Photo of fruit">
+  <mat-card-actions class="fruit-actions">
+    <button mat-fab aria-label="Remove from shopping basket button with icon" (click)="onUserAction('remove', fruit)">
+      <mat-icon>remove_shopping_cart</mat-icon>
+    </button>
+    <span class="fruit-available-quantity">{{fruit.quantity}}</span>
+    <button mat-fab aria-label="Add to shopping basket button with icon" (click)="onUserAction('add', fruit)">
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

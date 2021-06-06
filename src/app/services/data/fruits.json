@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Apple",
+    "imagePath": "assets/apple.jpeg",
+    "color": "#8c191d",
+    "quantity": 10,
+    "emoji": "🍎"
+  },
+  {
+    "name": "Orange",
+    "imagePath": "assets/orange.jpeg",
+    "color": "#a96230",
+    "quantity": 10,
+    "emoji": "🍊"
+  },
+  {
+    "name": "Banana",
+    "imagePath": "assets/banana.jpeg",
+    "color": "#eabd00",
+    "quantity": 10,
+    "emoji": "🍌"
+  }
+]

@@ -1,0 +1,21 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Shopping basket button with icon">
+  <mat-icon matBadge="{{cart.length}}" matBadgeColor="accent">shopping_basket</mat-icon>
+  <span class="cdk-visually-hidden">
+    Shopping basket button with overlaid badge reading
+  </span>
+</button>
+<mat-menu #menu="matMenu">
+  <mat-card class="cart">
+    <mat-card-header>
+      <mat-card-title>My Shopping Basket</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h4 *ngIf="cart.length === 0">Nothing here, try adding something fresh 🍎 🍊 🍌</h4>
+      <ul [class]="cart.length !== 0 ? 'items-basket': ''">
+        <li *ngFor="let item of cart.slice().reverse()" [style.color]="item.color">
+          ---------------------{{item.emoji}}---------------------
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</mat-menu>

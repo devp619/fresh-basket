@@ -1,0 +1,3 @@
+<section class="container">
+  <app-fruit *ngFor="let fruit of fruits" [fruit]="fruit" (onFruitChange)="updateFruits($event)"></app-fruit>
+</section>

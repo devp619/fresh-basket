@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Admin",
+    "permission": "all",
+    "password": "Admin"
+  },
+  {
+    "name": "MyName",
+    "permission": "none",
+    "password": "test"
+  }
+]

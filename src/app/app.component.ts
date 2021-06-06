@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccountService } from './services/account.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fresh-basket';
+  user: any;
+  constructor(private accountService: AccountService) { }
+  logout() {
+    this.accountService.logout();
+  }
+
+  OnInit() {
+    this.user = this.accountService.userValue;
+    this.accountService.user
+      .subscribe(user => {
+        this.user = user;
+      })
+  }
 }
