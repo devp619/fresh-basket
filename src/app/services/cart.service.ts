@@ -16,6 +16,7 @@ export class CartService {
 
   addFruitToCart(fruit: IFruit) {
     this.cart.push(fruit);
+    this.notificationService.info(`${fruit.emoji} has been added to cart`);
     this.cartUpdateSubject.next(this.getCartItems());
   }
 
@@ -23,14 +24,15 @@ export class CartService {
     const fruitAtTop: IFruit = this.cart.peekTop();
     let isSuccessful = false;
     if (!fruitAtTop) {
-      this.notificationService.info(`Cannot remove ${fruit.name} from basket since its is empty`);
+      this.notificationService.info(`Cannot remove ${fruit.emoji} from basket since its is empty`);
     } else {
       if (fruitAtTop.name === fruit.name) {
         this.cart.pop();
+        this.notificationService.info(`${fruit.emoji} has been removed from cart`);
         this.cartUpdateSubject.next(this.getCartItems());
         isSuccessful = true;
       } else {
-        this.notificationService.info(`Cannot remove ${fruit.name} from basket since its not on top`);
+        this.notificationService.info(`Cannot remove ${fruit.emoji} from basket since its not on top`);
       }
     }
     return isSuccessful;
