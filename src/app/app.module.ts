@@ -17,7 +17,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -45,7 +46,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatBadgeModule,
     MatListModule,
     MatSnackBarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
 
   ],
   providers: [],
