@@ -16,7 +16,7 @@ export class CartService {
 
   addFruitToCart(fruit: IFruit) {
     this.cart.push(fruit);
-    this.notificationService.info(`${fruit.emoji} has been added to cart`);
+    this.notificationService.info(`${fruit.emoji} has been added to basket`);
     this.cartUpdateSubject.next(this.getCartItems());
   }
 
@@ -28,7 +28,7 @@ export class CartService {
     } else {
       if (fruitAtTop.name === fruit.name) {
         this.cart.pop();
-        this.notificationService.info(`${fruit.emoji} has been removed from cart`);
+        this.notificationService.info(`${fruit.emoji} has been removed from basket`);
         this.cartUpdateSubject.next(this.getCartItems());
         isSuccessful = true;
       } else {
